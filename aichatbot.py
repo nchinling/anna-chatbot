@@ -10,7 +10,7 @@ class ChatBot():
     def speech_to_text(self):
         recognizer = sr.Recognizer()
         with sr.Microphone() as mic:
-            recognizer.adjust_for_ambient_noise(mic, duration=5)
+            recognizer.adjust_for_ambient_noise(mic)
             print("listening...")
             audio = recognizer.listen(mic)
         try:
